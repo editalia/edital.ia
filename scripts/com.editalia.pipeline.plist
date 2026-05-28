@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Template launchd para macOS.
+  Os placeholders __RUN_SCRIPT__ e __PROJECT_DIR__ sao substituidos pelo
+  install_cron_macos.sh com os caminhos absolutos do projeto.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.editalia.pipeline</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>__RUN_SCRIPT__</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>__PROJECT_DIR__</string>
+
+    <!-- Executa diariamente as 08:00 -->
+    <key>StartCalendarInterval</key>
+    <dict>
+        <key>Hour</key>
+        <integer>8</integer>
+        <key>Minute</key>
+        <integer>0</integer>
+    </dict>
+
+    <!-- Nao roda ao carregar (apenas no horario agendado) -->
+    <key>RunAtLoad</key>
+    <false/>
+
+    <!-- Logs do launchd (separados dos logs do pipeline) -->
+    <key>StandardOutPath</key>
+    <string>__PROJECT_DIR__/state/pipeline_logs/launchd.out.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>__PROJECT_DIR__/state/pipeline_logs/launchd.err.log</string>
+</dict>
+</plist>

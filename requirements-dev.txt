@@ -1,0 +1,4 @@
+# Dependencias usadas apenas para testes (nao necessarias em producao).
+# Instale com:  pip install -r requirements-dev.txt
+pytest>=7.0
+pytest-mock>=3.10

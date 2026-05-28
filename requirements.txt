@@ -1,0 +1,8 @@
+requests
+beautifulsoup4
+ollama
+pymupdf4llm
+python-dotenv
+chromadb
+sentence-transformers
+streamlit

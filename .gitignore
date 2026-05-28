@@ -1,0 +1,42 @@
+# ───── Python ─────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# ───── Virtualenv ─────
+.venv/
+venv/
+env/
+
+# ───── Variaveis de ambiente ─────
+.env
+.env.local
+
+# ───── Editores / IDEs ─────
+.vscode/
+.idea/
+.claude/
+
+# ───── Sistema operacional ─────
+.DS_Store
+Thumbs.db
+
+# ───── Dados gerados pelo pipeline (recriaveis) ─────
+editais_baixados/
+editais_markdown/
+chroma_db/
+
+# ───── State runtime (cada usuario gera o seu ao rodar o pipeline) ─────
+state/*.json
+state/pipeline_logs/
+
+# ───── Documentos internos (nao versionados) ─────
+instrucoes/
+CONTEXTO.md
+explicacao_rag.md
+
+# ───── Testes ─────
+.pytest_cache/
+htmlcov/
+.coverage
